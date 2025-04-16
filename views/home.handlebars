@@ -1,19 +1,24 @@
-<h1>Restaurants</h1>
-<table border="1" cellspacing="0" cellpadding="8">
+<h1 style="text-align: center;">Restaurants</h1>
+
+<table style="width: 100%; border-collapse: collapse; font-family: sans-serif;">
+  <thead>
     <tr>
-        <th>Name</th>
-        <th>Cuisine</th>
-        <th>Borough</th>
-        <th>Actions</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Name</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Cuisine</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Borough</th>
+      <th style="border-bottom: 1px solid #ccc; text-align: center; padding: 5px;">Actions</th>
     </tr>
+  </thead>
+  <tbody>
     {{#each restaurants}}
     <tr>
-        <td>{{name}}</td>
-        <td>{{cuisine}}</td>
-        <td>{{borough}}</td>
-        <td>
-            <a href="/restaurants/{{_id}}">View</a>
-        </td>
+      <td style="padding: 5px;">{{name}}</td>
+      <td style="padding: 5px;">{{cuisine}}</td>
+      <td style="padding: 5px;">{{borough}}</td>
+      <td style="padding: 5px; text-align: center;">
+        <a href="/restaurants/{{_id}}" style="text-decoration: none; color: #007BFF;">View</a>
+      </td>
     </tr>
     {{/each}}
+  </tbody>
 </table>

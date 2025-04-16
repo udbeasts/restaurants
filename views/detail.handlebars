@@ -1,15 +1,16 @@
-<h1>{{name}}</h1>
-<p><strong>Cuisine:</strong> {{cuisine}}</p>
-<p><strong>Borough:</strong> {{borough}}</p>
-<p><strong>Address:</strong>
-  {{address.building}}, {{address.street}}, {{address.zipcode}}
-</p>
+<div style="max-width: 600px; margin: 0 auto; font-family: sans-serif;">
+  <h1>{{name}}</h1>
 
-<h2>Grades:</h2>
-<ul>
-  {{#each grades}}
+  <p><strong>Cuisine:</strong> {{cuisine}}</p>
+  <p><strong>Borough:</strong> {{borough}}</p>
+  <p><strong>Address:</strong> {{address.building}}, {{address.street}}, {{address.zipcode}}</p>
+
+  <h2>Grades</h2>
+  <ul>
+    {{#each grades}}
     <li>Grade: {{grade}}, Score: {{score}}, Date: {{date}}</li>
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
 
-<a href="/">Back to list</a>
+  <a href="/" style="color: #007BFF; text-decoration: none;">← Back to list</a>
+</div>
