@@ -1,24 +1,26 @@
-<h1 style="text-align: center;">Restaurants</h1>
+<h1 style="text-align: center; font-family: Arial, sans-serif;">🍽️ Featured Restaurants</h1>
 
-<table style="width: 100%; border-collapse: collapse; font-family: sans-serif;">
-  <thead>
-    <tr>
-      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Name</th>
-      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Cuisine</th>
-      <th style="border-bottom: 1px solid #ccc; text-align: left; padding: 5px;">Borough</th>
-      <th style="border-bottom: 1px solid #ccc; text-align: center; padding: 5px;">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each restaurants}}
-    <tr>
-      <td style="padding: 5px;">{{name}}</td>
-      <td style="padding: 5px;">{{cuisine}}</td>
-      <td style="padding: 5px;">{{borough}}</td>
-      <td style="padding: 5px; text-align: center;">
-        <a href="/restaurants/{{_id}}" style="text-decoration: none; color: #007BFF;">View</a>
-      </td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+    <table style="width: 100%; border-collapse: collapse; font-family: 'Segoe UI', sans-serif;">
+        <thead style="background-color: #f5f5f5;">
+            <tr>
+                <th style="padding: 12px; border-bottom: 2px solid #ddd; text-align: left;">Name</th>
+                <th style="padding: 12px; border-bottom: 2px solid #ddd; text-align: left;">Cuisine</th>
+                <th style="padding: 12px; border-bottom: 2px solid #ddd; text-align: left;">Borough</th>
+                <th style="padding: 12px; border-bottom: 2px solid #ddd; text-align: center;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each restaurants}}
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;">{{name}}</td>
+                <td style="padding: 10px;">{{cuisine}}</td>
+                <td style="padding: 10px;">{{borough}}</td>
+                <td style="padding: 10px; text-align: center;">
+                    <a href="/restaurants/{{_id}}" style="background-color: #4CAF50; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px;">View</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

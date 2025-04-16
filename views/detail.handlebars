@@ -1,16 +1,38 @@
-<div style="max-width: 600px; margin: 0 auto; font-family: sans-serif;">
-  <h1>{{name}}</h1>
+<div style="max-width: 800px; margin: 40px auto; font-family: 'Segoe UI', sans-serif; padding: 24px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+  <h1 style="font-size: 32px; margin-bottom: 10px;">{{name}}</h1>
 
-  <p><strong>Cuisine:</strong> {{cuisine}}</p>
-  <p><strong>Borough:</strong> {{borough}}</p>
-  <p><strong>Address:</strong> {{address.building}}, {{address.street}}, {{address.zipcode}}</p>
+  <div style="margin-bottom: 16px;">
+    <p><strong>Cuisine:</strong> {{cuisine}}</p>
+    <p><strong>Borough:</strong> {{borough}}</p>
+    <p><strong>Address:</strong><br>
+      {{address.building}}, {{address.street}}<br>
+      {{address.zipcode}}
+    </p>
+  </div>
 
-  <h2>Grades</h2>
-  <ul>
-    {{#each grades}}
-    <li>Grade: {{grade}}, Score: {{score}}, Date: {{date}}</li>
-    {{/each}}
-  </ul>
+  <div style="margin-top: 30px;">
+    <h2 style="font-size: 24px; margin-bottom: 10px;">Grades</h2>
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid #eee;">
+      <thead style="background-color: #f8f8f8;">
+        <tr>
+          <th style="padding: 8px; text-align: left;">Grade</th>
+          <th style="padding: 8px; text-align: left;">Score</th>
+          <th style="padding: 8px; text-align: left;">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each grades}}
+        <tr style="border-bottom: 1px solid #eee;">
+          <td style="padding: 8px;">{{grade}}</td>
+          <td style="padding: 8px;">{{score}}</td>
+          <td style="padding: 8px;">{{date}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 
-  <a href="/" style="color: #007BFF; text-decoration: none;">← Back to list</a>
+  <div style="margin-top: 30px;">
+    <a href="/" style="display: inline-block; margin-top: 10px; background-color: #4CAF50; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none;">← Back to List</a>
+  </div>
 </div>
